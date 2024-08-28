@@ -1,0 +1,42 @@
+* VSC terminal commands and annotations for executing Playwright tests * 
+
+Commands: 
+
+* npx playwright test                                ---> Run all tests
+* npx playwright show-report                         ---> show the reports
+* npx playwright test --browser=chromium             ---> Run Tests with a specific browser (headless mode)
+* npx playwright test --browser=chrome --headed      ---> Run Tests with a specific browser (headed mode launchs a GUI)
+* npx playwright test fileName.ts --project=chromium --headed  ---> executes just one specific file. (Example: npx playwright test example.spec.ts --project=chromium --headed)
+* npx playwright test -g "test name" --project=chromium --headed  ---> executes just one specific test. ( Example: npx playwright test -g "has title" --project=chromium --headed)
+* npx playwright test --debug                         ---> Run tests in debug mode  
+* npx playwright test --project=chromium --trace on   
+* npx playwright test --project=chromium --debug 
+* 
+
+
+
+Annotations: 
+
+* skip : skips the test you want to ignore from the execution 
+
+(example : 
+
+test.skip ('has title', async ({page})=> {
+  await page.goto('https://playwright.dev/');
+
+  // Expect a title "to contain" a substring.
+  await expect(page).toHaveTitle(/Playwright/);
+});   )
+
+
+* only: executes the only one particular test you want to run
+
+
+(example : 
+
+test.only ('has title', async ({page})=> {
+  await page.goto('https://playwright.dev/');
+
+  // Expect a title "to contain" a substring.
+  await expect(page).toHaveTitle(/Playwright/);
+});   )
