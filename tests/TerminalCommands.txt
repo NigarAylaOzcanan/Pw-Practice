@@ -9,9 +9,9 @@ Commands:
 * npx playwright test fileName.ts --project=chromium --headed  ---> executes just one specific file. (Example: npx playwright test example.spec.ts --project=chromium --headed)
 * npx playwright test -g "test name" --project=chromium --headed  ---> executes just one specific test. ( Example: npx playwright test -g "has title" --project=chromium --headed)
 * npx playwright test --debug                         ---> Run tests in debug mode  
-* npx playwright test --project=chromium --trace on   
+* npx playwright test --project=chromium --trace on   --->  Enables tracing for the test run. When tracing is turned on, playwright records detailed information about each test, including actions, screenshots, DOM snapshots and network requests
 * npx playwright test --project=chromium --debug 
-* 
+* npx playwright test --ui 
 
 
 
